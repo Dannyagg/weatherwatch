@@ -21,5 +21,9 @@ Web application: “A web application is a computer program that utilizes web br
 a.	The retrieved information will appear below the search form
 ENJOY !!
 
+= Things to Improve =
+  User Interface - add US State name to location display 
+  Add map function correspnding to serach input
+
 References
 Gibb, R. (2016, May 31). What is a Web Application? StackPath. https://blog.stackpath.com/web-application/. 
