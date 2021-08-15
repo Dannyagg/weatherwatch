@@ -22,8 +22,12 @@ console.log('props',props)
 
     
     _fetchWeatherInfo = async () => {
+<<<<<<< HEAD
         const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
         const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.props.lat}&lon=${this.props.lon}&units=imperial&exclude=minutely,hourly&appid=${API_KEY}`)
+=======
+          const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.props.lat}&lon=${this.props.lon}&units=imperial&exclude=minutely,hourly&appid=`)
+>>>>>>> 9fa3d4a6e1508be5f4c1c5bc608cba23d7af1bf7
             .then(response => response.json());
         this.setState({
             weatherReport: response.daily

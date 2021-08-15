@@ -23,7 +23,11 @@ function WeatherSearch() {
         event.preventDefault();
 
 
+<<<<<<< HEAD
         const myApi = 'de07d1446efc27eb166e53b0fc109012'
+=======
+        const myApi = ''
+>>>>>>> 9fa3d4a6e1508be5f4c1c5bc608cba23d7af1bf7
         const response = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${local},US&appid=${myApi}`)
             .then(response => response.json())
         const { lon, lat, name, country, zip } = response;
@@ -52,6 +56,7 @@ function WeatherSearch() {
                 </button>
             </form> */}
 
+<<<<<<< HEAD
             <div className="form-container">
 
 
@@ -78,6 +83,27 @@ function WeatherSearch() {
 
             </div>
 
+=======
+
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb" controlId="formBasicEmail"  >
+                    <Form.Label>Search weather information by zip code:</Form.Label>
+                    <Form.Control
+                        type="number"
+                        value={local}
+                        placeholder="Enter zip code"
+                        onChange={handleChange} 
+                        required
+                        size="lg"
+                        />
+
+                </Form.Group>
+
+                <Button className="btn" variant="outline-info" type="submit" size ="lg">
+                    Search
+                </Button>
+            </Form>
+>>>>>>> 9fa3d4a6e1508be5f4c1c5bc608cba23d7af1bf7
 
 
             <div className="place"> <h1 className="city-nation"> {location.city} {location.nation}</h1> </div>
