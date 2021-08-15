@@ -23,7 +23,15 @@ function WeatherSearch() {
         event.preventDefault();
 
 
+<<<<<<< HEAD
         const myApi = 'de07d1446efc27eb166e53b0fc109012'
+=======
+<<<<<<< HEAD
+       
+=======
+        const myApi = ''
+
+>>>>>>> refs/remotes/origin/main
         const response = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${local},US&appid=${myApi}`)
             .then(response => response.json())
         const { lon, lat, name, country, zip } = response;
