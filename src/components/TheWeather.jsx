@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 
-
 class TheWeather extends Component {
     constructor(props) {
         super(props);
@@ -21,8 +20,10 @@ console.log('props',props)
         }
     }
 
+    
     _fetchWeatherInfo = async () => {
-          const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.props.lat}&lon=${this.props.lon}&units=imperial&exclude=minutely,hourly&appid=de07d1446efc27eb166e53b0fc109012`)
+        const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.props.lat}&lon=${this.props.lon}&units=imperial&exclude=minutely,hourly&appid=${API_KEY}`)
             .then(response => response.json());
         this.setState({
             weatherReport: response.daily

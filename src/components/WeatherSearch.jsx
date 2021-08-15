@@ -23,7 +23,7 @@ function WeatherSearch() {
         event.preventDefault();
 
 
-        const myApi = ''
+        const myApi = 'de07d1446efc27eb166e53b0fc109012'
         const response = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${local},US&appid=${myApi}`)
             .then(response => response.json())
         const { lon, lat, name, country, zip } = response;
@@ -52,25 +52,32 @@ function WeatherSearch() {
                 </button>
             </form> */}
 
+            <div className="form-container">
 
-            <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb" controlId="formBasicEmail"  >
-                    <Form.Label>Search weather information by zip code:</Form.Label>
-                    <Form.Control
-                        type="number"
-                        value={local}
-                        placeholder="Enter zip code"
-                        onChange={handleChange} 
-                        required
-                        size="lg"
+
+                <Form className="form-horizontal" onSubmit={handleSubmit}>
+                    <Form.Group className="mb" controlId="formBasicEmail"  >
+                        <Form.Label> Search weather information by zip code:  </Form.Label> 
+                        
+                        <Form.Control
+                            type="number"
+                            value={local}
+                            placeholder="Enter zip code"
+                            onChange={handleChange}
+                            required
+                            size="lg"
                         />
 
-                </Form.Group>
+                    </Form.Group>
 
-                <Button className="btn" variant="outline-info" type="submit" size ="lg">
-                    Search
-                </Button>
-            </Form>
+                    <Button className="btn" variant="outline-info" type="submit" size="lg">
+                        Search
+                    </Button>
+                </Form>
+
+
+            </div>
+
 
 
             <div className="place"> <h1 className="city-nation"> {location.city} {location.nation}</h1> </div>

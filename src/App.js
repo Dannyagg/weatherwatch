@@ -2,7 +2,6 @@ import React from 'react';
 import WeatherSearch from './components/WeatherSearch';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
 console.log(process.env.React_API_KEY)
 
 
@@ -12,8 +11,9 @@ function App() {
 
       <h1 className="heading"> Weather Watch </h1>
 
-      <WeatherSearch />
-      
+      <div className="card-box"> 
+         <WeatherSearch />
+      </div>
 
     </div>
 
