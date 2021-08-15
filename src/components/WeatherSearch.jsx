@@ -23,15 +23,8 @@ function WeatherSearch() {
         event.preventDefault();
 
 
-<<<<<<< HEAD
-        const myApi = process.env.React_API_KEY
-=======
-<<<<<<< HEAD
-       
-=======
-        const myApi = ''
 
->>>>>>> refs/remotes/origin/main
+        const myApi = process.env.React_API_KEY
         const response = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${local},US&appid=${process.env.React_API_KEY}`)
             .then(response => response.json())
         const { lon, lat, name, country, zip } = response;
