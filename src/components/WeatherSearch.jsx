@@ -24,10 +24,10 @@ function WeatherSearch() {
 
 
 <<<<<<< HEAD
-        const myApi = 'de07d1446efc27eb166e53b0fc109012'
+       
 =======
         const myApi = ''
->>>>>>> 9fa3d4a6e1508be5f4c1c5bc608cba23d7af1bf7
+
         const response = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${local},US&appid=${myApi}`)
             .then(response => response.json())
         const { lon, lat, name, country, zip } = response;
