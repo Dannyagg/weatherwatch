@@ -16,7 +16,7 @@ Web application: “A web application is a computer program that utilizes web br
 
 =How to use the weather watch web application=
 
-1.	Navigate to the website (to be added in next commit) 
+1.	Navigate to the website: https://myweatherwatch.netlify.app/ 
 2.	Enter any zip code within the United States in the search form
 3.	Click the “Search” Button to retrieve weekly weather for input location
 a.	The retrieved information will appear below the search form
