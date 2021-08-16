@@ -22,11 +22,10 @@ function WeatherSearch() {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-
-
-        const myApi = process.env.React_API_KEY
-        const response = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${local},US&appid=${process.env.React_API_KEY}`)
+        const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
+        const response = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${local},US&appid=${API_KEY}`)
             .then(response => response.json())
+
         const { lon, lat, name, country, zip } = response;
         console.log(response);
 
@@ -87,7 +86,6 @@ function WeatherSearch() {
                 (<TheWeather lat={location.latitude} lon={location.longitude} name={location.city}
                     country={location.country} zip={location.area} />) : null}
         </div>
-
 
     )
 

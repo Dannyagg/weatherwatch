@@ -4,7 +4,6 @@
   flex-direction: column;
   align-content: center;
   justify-content: center;
-
 }
 
 .App-logo {
@@ -47,7 +46,6 @@
   
 }
 
-
 .form-container {
   align-items: center;
   display: flex;
@@ -67,6 +65,7 @@
 
 .heading {
   padding: 20px;
+  
 
 }
 
