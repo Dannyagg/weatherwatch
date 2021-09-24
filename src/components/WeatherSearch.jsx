@@ -6,7 +6,6 @@ import Button from 'react-bootstrap/Button';
 
 
 function WeatherSearch() {
-
     const [local, setLocal] = useState();
     const [location, setLocation] = useState({
         longitude: null,
@@ -36,50 +35,25 @@ function WeatherSearch() {
     return (
 
         <div>
-
-            {/* <form className="form-horizontal" onSubmit={handleSubmit}>
-                <label>
-                    Search weather information by zip code:
-                    <input
-                        type="number"
-                        value={local}
-                        placeholder="Enter zip code"
-                        onChange={handleChange}
-                    />
-                </label>
-                <button className="btn" type=" submit" >
-                    Search
-                </button>
-            </form> */}
-
             <div className="form-container">
-
-
                 <Form className="form-horizontal" onSubmit={handleSubmit}>
                     <Form.Group className="mb" controlId="formBasicEmail"  >
-                        <Form.Label> Search weather information by zip code:  </Form.Label> 
-                        
+                        <Form.Label className="label"> Search weekly weather report by zip code: </Form.Label>   
                         <Form.Control
                             type="number"
                             value={local}
                             placeholder="Enter zip code"
                             onChange={handleChange}
                             required
-                            size="lg"
-                        />
-
+                            size="lg"  />      
                     </Form.Group>
 
-                    <Button className="btn" variant="outline-info" type="submit" size="lg">
+                    <Button className="btn" variant="success" type="submit" size="lg">
                         Search
                     </Button>
                 </Form>
 
-
             </div>
-
-
-
             <div className="place"> <h1 className="city-nation"> {location.city} {location.nation}</h1> </div>
 
             {!!location.latitude && !!location.longitude ?
