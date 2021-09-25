@@ -44,14 +44,36 @@ class TheWeather extends Component {
 
                         const unixTime = singleDay.dt;
                         const date = new Date(unixTime * 1000);
+                        let weekDay = date.getDay();
+                        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                        let theDay = '';
+                        if (weekDay === 6) theDay = days[6]
+                        else
+                            if (weekDay === 0) theDay = days[0]
+                            else
+                                if (weekDay === 1) theDay = days[1]
+                                else
+                                    if (weekDay === 2) theDay = days[2]
+                                    else
+                                        if (weekDay === 3) theDay = days[3]
+                                        else
 
+                                            if (weekDay === 4) theDay = days[4]
+                                            else
+                                                if (weekDay === 5) theDay = days[5]
+                                            else
+                                                if (weekDay === 6) theDay = days[6]
+
+                        console.log(theDay);
 
                         return (
                             <div className="weather-report">
 
                                 <Card className="weather-card" border="success" style={{ width: 'auto' }} >
                                     <Card.Header>
+                                        <p><strong>{theDay}</strong></p>
                                         <p>Date: <strong>{date.toLocaleDateString("en-US")}</strong></p>
+                                        
                                     </Card.Header>
                                     <Card.Body>
                                         <Card.Text>

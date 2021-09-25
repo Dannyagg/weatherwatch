@@ -12,11 +12,7 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
 
 .App-header {
   background-color: #282c34;
@@ -66,10 +62,13 @@
 .heading {
   padding: 20px;
   text-shadow: .1em .1em .2em rgba(0, 0, 0, 0.6);
-  /* background-color: white; */
   color:#39584a;
   /* -webkit-text-stroke: 1px white; */
   
+}
+
+.place {
+  color:#39584a;
 }
 
 .btn {
@@ -82,17 +81,21 @@ Form {
   display: flex;
 }
 
-
-.label {
-  display: flex;
-  /* flex-flow: row; */
-  /* flex-direction: row; */
-  /* color:#0dcaf0; */
+.Weather-image {
+  box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  image-resolution:unset;
 
 }
 
 .App-link {
   color: #61dafb;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes App-logo-spin {
