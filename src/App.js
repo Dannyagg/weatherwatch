@@ -1,26 +1,19 @@
 import React from 'react';
 import WeatherSearch from './components/WeatherSearch';
+// import MapData from './components/MapData';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import manojmalshanunsplash from './components/Images/manojmalshanunsplash.jpg';
-console.log(process.env.React_API_KEY)
 
 
 function App() {
   return (
-    <div className="App"
-      style={{
-        backgroundImage: `url(${manojmalshanunsplash})`,
-        backgroundSize: "cover",
-        
-      }}
-    >
+    <div className="App" >
 
       <h1 className="heading"> Weather Watch </h1>
-      {/* <hr /> */}
-
+   
       <div className="card-box"> 
          <WeatherSearch />
+         {/* <MapData /> */}
       </div>
 
     </div>

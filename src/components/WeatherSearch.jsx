@@ -4,14 +4,14 @@ import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-
 function WeatherSearch() {
     const [local, setLocal] = useState();
     const [location, setLocation] = useState({
         longitude: null,
         latitude: null,
-        nation: null,
-        city: null
+        nation: '',
+        city: '',
+
     });
 
     const handleChange = (event) => {
@@ -26,8 +26,6 @@ function WeatherSearch() {
             .then(response => response.json())
 
         const { lon, lat, name, country, zip } = response;
-        console.log(response);
-
         setLocation({ longitude: lon, latitude: lat, city: name, nation: country, area: zip });
 
     }
@@ -38,14 +36,14 @@ function WeatherSearch() {
             <div className="form-container">
                 <Form className="form-horizontal" onSubmit={handleSubmit}>
                     <Form.Group className="mb" controlId="formBasicEmail"  >
-                        <Form.Label className="label"> Search weekly weather report by zip code: </Form.Label>   
+                        <Form.Label className="label"> Search weekly weather report by zip code: </Form.Label>
                         <Form.Control
                             type="number"
                             value={local}
                             placeholder="Enter zip code"
                             onChange={handleChange}
                             required
-                            size="lg"  />      
+                            size="lg" />
                     </Form.Group>
 
                     <Button className="btn" variant="success" type="submit" size="lg">
@@ -54,12 +52,15 @@ function WeatherSearch() {
                 </Form>
 
             </div>
-            <div className="place"> <h1 className="city-nation"> {location.city} {location.nation}</h1> </div>
+
+            <div className="place"> <h1 className="city-nation"> {`${location.city} ${location.nation}`} </h1> </div>
 
             {!!location.latitude && !!location.longitude ?
                 (<TheWeather lat={location.latitude} lon={location.longitude} name={location.city}
                     country={location.country} zip={location.area} />) : null}
         </div>
+
+
 
     )
 
