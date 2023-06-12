@@ -1,7 +1,6 @@
 = Weather Watch =
 
-Audience: Common Consumer![Screenshot 2023-06-12 142441](https://github.com/Dannyagg/weatherwatch/assets/83418934/5112b82b-3fe5-4a48-8a08-d41f284f749c)
-
+![weatherpaa](https://github.com/Dannyagg/weatherwatch/assets/83418934/a08bcd1e-a964-4259-b691-93142de0da2b)
 
 = Summary =
 The weather watch application allows users to retrieve a weekly weather report for any zip code within the United States. In today’s technologically driven world, users are accustomed to instant delivery of information to make quick and informed decisions. This weather application serves this specific need of users looking to get current and weekly weather information.
